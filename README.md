@@ -131,7 +131,7 @@ console.log(numberToWords(123456789, "تومان"));
 
 #### 2. در مرورگر (Browser):
 
-فایل کتابخانه در پوشه for browser است را به پروژه HTML خود اضافه کنید:
+فایل کتابخانه در پوشه dist است را به پروژه HTML خود اضافه کنید:
 
 ```javascript
 <script src="path/to/abdal-number-to-persian-words.js"></script>
