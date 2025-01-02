@@ -169,6 +169,13 @@ console.log(numberToWords(123456789, "تومان"));
 </script>
 ```
 
+یا می توانید از  CDN استفاده کنید 
+```javascript
+<script src="https://cdn.jsdelivr.net/gh/ebrasha/abdal-number-to-persian-words@1.5/dist/abdal-number-to-persian-words.js"></script>
+```
+
+
+
 ##### امکانات نمونه:
 
 1. اعداد اعشاری:
