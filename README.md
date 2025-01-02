@@ -136,11 +136,39 @@ console.log(numberToWords(123456789, "تومان"));
 ```javascript
 <script src="path/to/abdal-number-to-persian-words.js"></script>
 <script>
-    console.log(numberToWords(123456789, "ریال"));
+    console.log(AbdalNumberToWords.numberToWords(123456789, "ریال"));
     // خروجی: صد و بیست و سه میلیون و چهارصد و پنجاه و شش هزار و هفتصد و هشتاد و نه ریال
 </script>
 
 ```
+برای استفاده در زمانی که فیلد های ورودی دارید
+
+```javascript
+<script>
+ 
+    function updateOutput() {
+        const numberInput = document.getElementById('charge_amount'); // دریافت ورودی عدد
+        const unitInput = document.getElementById('unit'); // دریافت ورودی واحد
+        const outputElement = document.getElementById('output'); // دریافت خروجی
+
+        const numberValue = numberInput.value.replace(/,/g, ''); // حذف کاما از ورودی عدد
+        const unitValue = unitInput.value.trim(); // دریافت مقدار واحد
+
+        try {
+            const words = AbdalNumberToWords.numberToWords(numberValue, unitValue); // تبدیل عدد به حروف فارسی
+            outputElement.textContent = words; // نمایش نتیجه در خروجی
+        } catch (error) {
+            outputElement.textContent = "Error: Invalid input."; // نمایش پیام خطا
+        }
+    }
+
+    // اتصال رویداد به ورودی‌ها
+    document.getElementById('charge_amount').addEventListener('input', updateOutput);
+    document.getElementById('unit').addEventListener('input', updateOutput);
+
+</script>
+```
+
 ##### امکانات نمونه:
 
 1. اعداد اعشاری:
