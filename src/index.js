@@ -4,7 +4,7 @@
  * License: MIT
  * Git: https://github.com/ebrasha/abdal-number-to-persian-words
  * Copyright: 2025 Ebrahim Shafiei
- * Version: 1.5
+ * Version: 1.6
  * Email: Prof.Shafiei@Gmail.com
  * "Coding is an engaging and beloved hobby for me. I passionately and insatiably pursue knowledge in cybersecurity and programming." — Ebrahim Shafiei (EbraSha)
  * reference: https://fa.wikipedia.org/wiki/%D9%86%D8%A7%D9%85_%D8%A7%D8%B9%D8%AF%D8%A7%D8%AF_%D8%A8%D8%B2%D8%B1%DA%AF
@@ -24,10 +24,14 @@ export function numberToWords(num, unit) {
 
     const [integerPart, decimalPart] = num.split(".");
     const scales = [
-        "", "هزار", "میلیون", "میلیارد", "بیلیون", "بیلیارد", "تریلیون", "تریلیارد",
-        "کوآدریلیون", "کادریلیارد", "کوینتیلیون", "کوانتیلیارد", "سکستیلیون",
-        "سکستیلیارد", "سپتیلیون", "سپتیلیارد", "اکتیلیون", "اکتیلیارد", "نانیلیون",
-        "نانیلیارد", "دسیلیون", "دسیلیارد"
+        "", "هزار", "میلیون", "میلیارد", "بیلیون", "بیلیارد",
+        "تریلیون", "تریلیارد", "کوآدریلیون", "کادریلیارد",
+        "کوینتیلیون", "کوانتیلیارد", "سکستیلیون", "سکستیلیارد",
+        "سپتیلیون", "سپتیلیارد", "اکتیلیون", "اکتیلیارد",
+        "نانیلیون", "نانیلیارد", "دسیلیون", "دسیلیارد",
+        "آندسیلیون", "آندسیلیارد", "دودسیلیون", "دودسیلیارد",
+        "تریدسیلیون", "تریدسیلیارد", "کوادردسیلیون", "کوادردسیلیارد",
+        "کویندسیلیون", "کویندسیلیارد", "سیدسیلیون", "سیدسیلیارد"
     ];
 
     const chunks = prepareNumber(integerPart || "0");
